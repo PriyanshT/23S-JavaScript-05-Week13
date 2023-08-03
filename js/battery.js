@@ -15,14 +15,20 @@ const chargeMeter = document.querySelector('#battery dd:nth-of-type(2) progress'
 
 // STEP 3c: Update the charge level
 
-// STEP 2a: Using the getBattery() method of the navigator object, create a promise to retrieve the battery information
+// STEP 2a: Using the getBattery() method of the navigator object, 
+//create a promise to retrieve the battery information
+navigator.getBatttery().then(battery => {
+    // STEP 2b: See what the battery object contains
+    console.log(battery);
+    // STEP 3d: Update the battery information when the promise resolves
 
-// STEP 2b: See what the battery object contains
+    // STEP 4a: Event listener for changes to the charging status
 
-// STEP 3d: Update the battery information when the promise resolves
+    // STEP 4b: Event listener for changes to the charge level
+})
 
-// STEP 4a: Event listener for changes to the charging status
 
-// STEP 4b: Event listener for changes to the charge level
+
+
 
 /* This script adapted from the excellent code examples found at https://www.w3.org/TR/battery-status/#examples and https://developer.mozilla.org/en-US/docs/Web/API/Battery_Status_API */
